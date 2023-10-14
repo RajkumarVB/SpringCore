@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 public class Greeter {
     private HelloWorldMessage helloWorldMessage;
 
-    public Greeter() {
-        this.helloWorldMessage = new HelloWorldMessage();
+    public Greeter(HelloWorldMessage helloWorldMessage) {
+        this.helloWorldMessage = helloWorldMessage;
     }
 
     public void greet(){

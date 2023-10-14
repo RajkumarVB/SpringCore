@@ -9,8 +9,8 @@ import org.springframework.context.annotation.Configuration;
 public class Main {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
-        HelloWorldMessage message = context.getBean(HelloWorldMessage.class);
-        System.out.println(message.getMessage());
+        Greeter greeter = context.getBean(Greeter.class);
+        greeter.greet();
 
     }
 }
