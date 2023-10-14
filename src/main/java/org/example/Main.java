@@ -1,6 +1,7 @@
 package org.example;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,5 +12,10 @@ public class Main {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
         Greeter greeter = context.getBean(Greeter.class);
         greeter.greet();
+    }
+
+    @Bean
+    public HelloWorldMessage getHello(){
+        return new HelloWorldMessage();
     }
 }
