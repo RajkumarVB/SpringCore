@@ -9,8 +9,10 @@ public class Greeter {
 
     public Greeter() {
     }
+
     @Autowired
-    public Greeter(HelloWorldMessage helloWorldMessage) {
+    public void setHelloWorldMessage(HelloWorldMessage helloWorldMessage) {
+        System.out.println("Setter called");
         this.helloWorldMessage = helloWorldMessage;
     }
 

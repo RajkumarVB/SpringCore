@@ -11,6 +11,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(Main.class);
+        System.out.println("Got the context");
         Greeter greeter = context.getBean(Greeter.class);
         greeter.greet();
     }
