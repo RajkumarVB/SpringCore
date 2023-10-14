@@ -7,7 +7,7 @@ public class Greeter {
     private HelloWorldMessage helloWorldMessage;
 
     @Autowired
-    public void setHelloWorldMessage(HelloWorldMessage helloWorldMessage) {
+    public Greeter(HelloWorldMessage helloWorldMessage) {
         this.helloWorldMessage = helloWorldMessage;
     }
 

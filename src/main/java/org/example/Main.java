@@ -21,8 +21,6 @@ public class Main {
 
     @Bean
     public Greeter getGreeter(HelloWorldMessage helloWorldMessage){
-        Greeter g = new Greeter();
-        g.setHelloWorldMessage(helloWorldMessage);
-        return g;
+        return new Greeter(helloWorldMessage);
     }
 }
