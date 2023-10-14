@@ -1,11 +1,15 @@
 package org.example;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Greeter {
     private HelloWorldMessage helloWorldMessage;
 
+    public Greeter() {
+    }
+    @Autowired
     public Greeter(HelloWorldMessage helloWorldMessage) {
         this.helloWorldMessage = helloWorldMessage;
     }
