@@ -6,12 +6,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class HelloWorldMessage {
     private HelloWorldMessage helloWorldMessage;
-    public String getMessage(){
 
-        return "Hello World, Spring Core!";
-    }
     @Autowired
-    public void setHelloWorldMessage(HelloWorldMessage helloWorldMessage) {
+    public HelloWorldMessage(HelloWorldMessage helloWorldMessage) {
         this.helloWorldMessage = helloWorldMessage;
+    }
+
+    public String getMessage(){
+        return "Hello World, Spring Core!";
     }
 }
