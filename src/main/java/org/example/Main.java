@@ -18,4 +18,11 @@ public class Main {
     public HelloWorldMessage getHello(){
         return new HelloWorldMessage();
     }
+
+    @Bean
+    public Greeter getGreeter(HelloWorldMessage helloWorldMessage){
+        Greeter g = new Greeter();
+        g.setHelloWorldMessage(helloWorldMessage);
+        return g;
+    }
 }
