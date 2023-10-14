@@ -13,16 +13,17 @@ public class Main {
     }
 
     @Bean
+    @Lazy
     public HelloWorldMessage getHello(String greetMessage){
         return new HelloWorldMessage(greetMessage);
     }
 
     @Bean
-    @Lazy
     public Greeter getGreeter(HelloWorldMessage helloWorldMessage){
         return new Greeter(helloWorldMessage);
     }
 
+    @Lazy
     @Bean
     public String getGreetMessage(){
         return "How are you? ";
