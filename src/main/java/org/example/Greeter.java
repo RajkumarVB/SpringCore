@@ -7,11 +7,8 @@ import org.springframework.stereotype.Component;
 public class Greeter {
     private HelloWorldMessage helloWorldMessage;
 
-    public Greeter() {
-    }
-
     @Autowired(required = false)
-    public void setHelloWorldMessage(HelloWorldMessage helloWorldMessage) {
+    public Greeter(HelloWorldMessage helloWorldMessage) {
         this.helloWorldMessage = helloWorldMessage;
     }
 
