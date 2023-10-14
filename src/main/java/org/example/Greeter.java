@@ -8,6 +8,7 @@ public class Greeter {
 
     @Autowired
     public Greeter(HelloWorldMessage helloWorldMessage) {
+        System.out.println("In greeter constructor");
         this.helloWorldMessage = helloWorldMessage;
     }
 

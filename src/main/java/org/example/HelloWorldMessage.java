@@ -9,6 +9,7 @@ public class HelloWorldMessage {
 
     @Autowired
     public HelloWorldMessage(String greetingMessage) {
+        System.out.println("In Hello World Message constructor");
         this.greetingMessage = greetingMessage;
     }
 
