@@ -15,12 +15,17 @@ public class Main {
     }
 
     @Bean
-    public HelloWorldMessage getHello(){
-        return new HelloWorldMessage();
+    public HelloWorldMessage getHello(String greetMessage){
+        return new HelloWorldMessage(greetMessage);
     }
 
     @Bean
     public Greeter getGreeter(HelloWorldMessage helloWorldMessage){
         return new Greeter(helloWorldMessage);
+    }
+
+    @Bean
+    public String getGreetMessage(){
+        return "How are you? ";
     }
 }
