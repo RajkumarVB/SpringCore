@@ -5,15 +5,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Greeter {
+    @Autowired
     private HelloWorldMessage helloWorldMessage;
 
-    @Autowired(required = false)
-    public Greeter(HelloWorldMessage helloWorldMessage) {
-        this.helloWorldMessage = helloWorldMessage;
-    }
-
     public void greet(){
-        if(helloWorldMessage != null)
-            System.out.println(this.helloWorldMessage.getMessage());
+        System.out.println(this.helloWorldMessage.getMessage());
     }
 }
