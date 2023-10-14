@@ -9,12 +9,14 @@ public class Greeter {
 
     public Greeter() {
     }
-    @Autowired
-    public Greeter(HelloWorldMessage helloWorldMessage) {
+
+    @Autowired(required = false)
+    public void setHelloWorldMessage(HelloWorldMessage helloWorldMessage) {
         this.helloWorldMessage = helloWorldMessage;
     }
 
     public void greet(){
-        System.out.println(this.helloWorldMessage.getMessage());
+        if(helloWorldMessage != null)
+            System.out.println(this.helloWorldMessage.getMessage());
     }
 }
